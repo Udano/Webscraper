@@ -1,11 +1,8 @@
-from sqlalchemy import Column, Integer, String, Date
+from sqlalchemy import Column, Integer, String
 from db import Base
 
-class Article(Base):
-    __tablename__ = 'articles'
+class Keywords(Base):
+    __tablename__ = 'keywords'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    country = Column(String)
-    publication_name = Column(String)
-    headlines = Column(String)
-    retrieval_date = Column(Date)
+    keyword = Column(String, primary_key=True)
+    count = Column(Integer)
